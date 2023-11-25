@@ -1,0 +1,41 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+My Blog 
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'blog/post.css' %}" />
+  <link rel="stylesheet" href="{% static 'blog/index.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section id="welcome">
+  <header>
+    <img src="{% static "blog/images/pp.png" %}" alt="Max - The Author Of This Blog" />
+    <h2>My BLOG</h2>
+  </header>
+  <p>Hi, I am Max and I love to blog about tech and the world!</p>
+</section>
+
+<section id="latest-posts">
+  <h2>My Latest Thoughts</h2>
+
+  <ul>
+  
+      {% include "blog/includes/post.html" %}
+
+  </ul>
+</section>
+
+<section id="about">
+  <h2>Random Quote:</h2>
+  <p>
+    A quote from my favourite movie Superbad:
+    "They literally made me stop eating foods shaped like dicks! No hotdogs no popsicles, you know how many foods are shaped like dicks? The best kinds!"
+  </p>
+  
+</section>
+{% endblock %}
+
