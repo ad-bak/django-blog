@@ -53,6 +53,11 @@ body {
   text-decoration: none;
 }
 
+#summary a {
+  color: white;
+  text-decoration: none;
+}
+
 #summary time {
   font-weight: bold;
 }
